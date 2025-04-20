@@ -18,9 +18,12 @@ Este projeto automatiza a **geração em massa de certificados personalizados** 
 - Python 3.8 ou superior
 - Instalar as bibliotecas necessárias:
 
-```bash --- Bibliotecas
+ --- Bibliotecas
 pip install pandas openpyxl python-docx smtplib
 
+## 📁 Estrutura dos Arquivos
+
+```bash
 Enviando_Email/
 ├── 3.Gerar Certificado_modificar_+informacoes_envio.py  # Script principal
 ├── Alunos.xlsx                                          # Dados dos alunos
@@ -28,16 +31,15 @@ Enviando_Email/
 ├── Gerar Certificado_Teste.py                           # Teste de geração
 ├── Gerar Certificado_modificar_nome_Teste.py            # Teste com modificação de nome
 └── README.md                                             # Este arquivo
+```
 
 🧾 Passo a Passo para Usar
 1. Preencha a planilha Alunos.xlsx
 A planilha deve conter colunas como:
 
-Nome
-
-Email
-
-Outros campos que você queira incluir no certificado (ex: Curso, Data, etc)
+- Nome
+- Email
+- Outros campos que você queira incluir no certificado (ex: Curso, Data, etc)
 
 2. Personalize o modelo Certificado1.docx
 Use campos como {Nome}, {Curso}, {Data} etc. Esses serão substituídos pelos dados da planilha.
@@ -45,29 +47,21 @@ Use campos como {Nome}, {Curso}, {Data} etc. Esses serão substituídos pelos da
 3. Configure o e-mail de envio no script
 No arquivo 3.Gerar Certificado_modificar_+informacoes_envio.py, configure:
 
-python
-Copiar
-Editar
-email_remetente = "seu_email@gmail.com"
-senha = "sua_senha_do_app"  # Use senha de app para Gmail
-⚠️ Use contas com autenticação de dois fatores e senhas de app para maior segurança.
+- email_remetente = "seu_email@gmail.com"
+- senha = "sua_senha_do_app"  # Use senha de app para Gmail
+- ⚠️ Use contas com autenticação de dois fatores e senhas de app para maior segurança.
 
 4. Execute o script
-bash
-Copiar
-Editar
-python 3.Gerar Certificado_modificar_+informacoes_envio.py
-Certificados serão gerados automaticamente e enviados por e-mail.
+
+- python 3.Gerar Certificado_modificar_+informacoes_envio.py
+- Certificados serão gerados automaticamente e enviados por e-mail.
 
 ✏️ Personalização
-Você pode modificar o corpo do e-mail e o layout do certificado diretamente no código e no modelo .docx.
+- Você pode modificar o corpo do e-mail e o layout do certificado diretamente no código e no modelo .docx.
 
 ❗ Importante
-Verifique a permissão de envio de e-mails do seu provedor (ex: Gmail pode bloquear se detectar muitos envios).
+- Verifique a permissão de envio de e-mails do seu provedor (ex: Gmail pode bloquear se detectar muitos envios).
 
-Sempre revise os dados da planilha antes de executar o script.
-
-📬 Contato
-Para dúvidas, sugestões ou melhorias, fique à vontade para abrir uma issue ou contribuir!
+- Sempre revise os dados da planilha antes de executar o script.
 
 Feito com ❤️ para facilitar a sua automação!
